@@ -1,0 +1,131 @@
+<?xml version="1.0" ?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find erobotica_omnibot)/urdf/roller.urdf.xacro"/>
+
+<xacro:macro
+	name="rim_macro"
+	params="name color xyz rpy">
+
+		<link name="rim_${name}_link">
+			<inertial>
+				<origin xyz="0 0 -0.000343"/>
+				<mass value="0.0083"/>
+				<inertia
+					ixx="0.2321e-04"
+					ixy="0"
+					ixz="0"
+					iyy="0.2321e-04"
+					iyz="0"
+					izz="0.3735e-04"/>
+
+			</inertial>
+			<visual>
+				<geometry>
+
+					<mesh filename="package://erobotica_omnibot/mesh/roda.stl"/>
+				</geometry>
+				<material name="rim_${name}_material">
+					<color rgba="${color} 1"/>
+				</material>
+			</visual>
+			<collision>
+			<!---test -->
+				<geometry>
+					<!---<cylinder length="0.6" radius="0.029"/> -->
+					  <mesh filename="package://erobotica_omnibot/mesh/roda.stl"/> 
+				</geometry>
+			</collision>
+			
+		</link>
+
+		<joint
+			name="rim_${name}_joint"
+			type="continuous">
+
+			<parent link="base_link" />
+			<child link="rim_${name}_link" />
+			<axis xyz="0 0 1"/>
+			<origin xyz="${xyz}" rpy="${rpy}"/>
+
+		</joint>
+		<xacro:roller_macro
+			parent="${name}"
+			name="upfront"
+			xyz="0 0.022 0"
+			rpy="-1.570796326794896 0 1.570796326794896"
+		/>
+		<xacro:roller_macro
+			parent="${name}"
+			name="rightupfront"
+			xyz=" 0.02092 0.00679 0"
+			rpy="-1.570796326794896 0 -2.82743"
+		/>
+		<xacro:roller_macro
+			parent="${name}"
+			name="leftupfront"
+			xyz=" -0.02092 0.00679 0"
+			rpy="-1.570796326794896 0 2.82743"
+		/>
+
+		<xacro:roller_macro
+			parent="${name}"
+			name="rightdownfront"
+			xyz="0.01293 -0.01779 0"
+			rpy="-1.570796326794896 0 -0.959931"
+		/>
+		<xacro:roller_macro
+			parent="${name}"
+			name="lefttdownfront"
+			xyz="-0.01293 -0.01779 0"
+			rpy="-1.570796326794896 0 0.959931"
+		/>
+
+	<!---Back part of the wheel -->
+		<xacro:roller_macro
+			parent="${name}"
+			name="upback"
+			xyz="0 -0.022 0.013"
+			rpy="-1.570796326794896 0 1.570796326794896"
+		/>
+
+	<xacro:roller_macro
+			parent="${name}"
+			name="rightupback"
+			xyz=" -0.02092 -0.00679 0.013"
+			rpy="-1.570796326794896 0 -2.82743"
+		/>
+		<xacro:roller_macro
+			parent="${name}"
+			name="leftupback"
+			xyz=" 0.02092 -0.00679 0.013"
+			rpy="-1.570796326794896 0 2.82743"
+		/>
+
+		<xacro:roller_macro
+			parent="${name}"
+			name="rightdownback"
+			xyz="-0.01293 0.01779 0.013"
+			rpy="-1.570796326794896 0 -0.959931"
+		/>
+		<xacro:roller_macro
+			parent="${name}"
+			name="lefttdownback"
+			xyz="0.01293 0.01779 0.013"
+			rpy="-1.570796326794896 0 0.959931"
+		/>
+
+		<transmission name="rim_${name}_transmission">
+			<type>transmission_interface/SimpleTransmission</type>
+			<joint name="rim_${name}_joint">
+				<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+			</joint>
+			<actuator name="rim_${name}_motor">
+				<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+				<mechanicalReduction>1</mechanicalReduction>
+			</actuator>
+		</transmission>
+
+	</xacro:macro>
+
+</robot>
