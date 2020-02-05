@@ -18,7 +18,7 @@
 			</inertial>
 			<visual>
 				<geometry>
-					<mesh filename="package://erobotica_omnibot/mesh/roller.stl"/>
+					<mesh filename="package://erobotica_omnibot/mesh/rolamento.stl"/>
 				</geometry>
 				<material name="roller_material">
 					<color rgba="0.1 0.1 0.1 1"/>
@@ -26,7 +26,7 @@
 			</visual>
 			<collision>
 				<geometry>
-					<mesh filename="package://erobotica_omnibot/mesh/roller.stl"/>
+					<mesh filename="package://erobotica_omnibot/mesh/rolamento.stl"/>
 				</geometry>
 			</collision>
 		</link>

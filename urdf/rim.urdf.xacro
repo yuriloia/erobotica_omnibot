@@ -10,14 +10,14 @@
 		<link name="rim_${name}_link">
 			<inertial>
 				<origin xyz="0 0 -0.000343"/>
-				<mass value="0.0083"/>
+				<mass value="0.083"/>
 				<inertia
-					ixx="0.2321e-04"
+					ixx="0.2198e-06"
 					ixy="0"
 					ixz="0"
-					iyy="0.2321e-04"
+					iyy="0.2198e-06"
 					iyz="0"
-					izz="0.3735e-04"/>
+					izz="0.3490e-06"/>
 
 			</inertial>
 			<visual>
@@ -52,32 +52,32 @@
 		<xacro:roller_macro
 			parent="${name}"
 			name="upfront"
-			xyz="0 0.022 0"
+			xyz="0 0.022857 0"
 			rpy="-1.570796326794896 0 1.570796326794896"
 		/>
 		<xacro:roller_macro
 			parent="${name}"
 			name="rightupfront"
-			xyz=" 0.02092 0.00679 0"
+			xyz=" 0.021738 0.007063 0"
 			rpy="-1.570796326794896 0 -2.82743"
 		/>
 		<xacro:roller_macro
 			parent="${name}"
 			name="leftupfront"
-			xyz=" -0.02092 0.00679 0"
+			xyz=" -0.021738  0.007063 0"
 			rpy="-1.570796326794896 0 2.82743"
 		/>
 
 		<xacro:roller_macro
 			parent="${name}"
 			name="rightdownfront"
-			xyz="0.01293 -0.01779 0"
+			xyz="0.013435 -0.018491 0"
 			rpy="-1.570796326794896 0 -0.959931"
 		/>
 		<xacro:roller_macro
 			parent="${name}"
 			name="lefttdownfront"
-			xyz="-0.01293 -0.01779 0"
+			xyz="-0.013435 -0.018491 0"
 			rpy="-1.570796326794896 0 0.959931"
 		/>
 
@@ -85,33 +85,33 @@
 		<xacro:roller_macro
 			parent="${name}"
 			name="upback"
-			xyz="0 -0.022 0.013"
+			xyz="0 -0.022857 0.013"
 			rpy="-1.570796326794896 0 1.570796326794896"
 		/>
 
 	<xacro:roller_macro
 			parent="${name}"
 			name="rightupback"
-			xyz=" -0.02092 -0.00679 0.013"
+			xyz=" -0.021738 -0.007063 0.013"
 			rpy="-1.570796326794896 0 -2.82743"
 		/>
 		<xacro:roller_macro
 			parent="${name}"
 			name="leftupback"
-			xyz=" 0.02092 -0.00679 0.013"
+			xyz=" 0.021738 -0.007063 0.013"
 			rpy="-1.570796326794896 0 2.82743"
 		/>
 
 		<xacro:roller_macro
 			parent="${name}"
 			name="rightdownback"
-			xyz="-0.01293 0.01779 0.013"
+			xyz="-0.013435 0.018491 0.013"
 			rpy="-1.570796326794896 0 -0.959931"
 		/>
 		<xacro:roller_macro
 			parent="${name}"
 			name="lefttdownback"
-			xyz="0.01293 0.01779 0.013"
+			xyz="0.013435 0.018491 0.013"
 			rpy="-1.570796326794896 0 0.959931"
 		/>
 
