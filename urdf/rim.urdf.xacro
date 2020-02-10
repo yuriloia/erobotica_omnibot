@@ -12,12 +12,12 @@
 				<origin xyz="0 0 -0.000343"/>
 				<mass value="0.083"/>
 				<inertia
-					ixx="0.1846e-04"
+					ixx="0.1449e-04"
 					ixy="0"
 					ixz="0"
-					iyy="0.1846e-04"
+					iyy="0.1449e-04"
 					iyz="0"
-					izz="0.3138e-04"/>
+					izz="0.2283e-04"/>
 
 			</inertial>
 			<visual>
@@ -52,68 +52,70 @@
 		<xacro:roller_macro
 			parent="${name}"
 			name="upfront"
-			xyz="0 0.022857 0"
+			xyz="0 0.022857 0.005"
 			rpy="-1.570796326794896 0 1.570796326794896"
 		/>
 		<xacro:roller_macro
 			parent="${name}"
 			name="rightupfront"
-			xyz=" 0.021738 0.007063 0"
+			xyz=" 0.021738 0.007063 0.005"
 			rpy="-1.570796326794896 0 -2.82743"
 		/>
 		<xacro:roller_macro
 			parent="${name}"
 			name="leftupfront"
-			xyz=" -0.021738  0.007063 0"
+			xyz=" -0.021738  0.007063 0.005"
 			rpy="-1.570796326794896 0 2.82743"
 		/>
 
 		<xacro:roller_macro
 			parent="${name}"
 			name="rightdownfront"
-			xyz="0.013435 -0.018491 0"
+			xyz="0.013435 -0.018491 0.005"
 			rpy="-1.570796326794896 0 -0.959931"
 		/>
 		<xacro:roller_macro
 			parent="${name}"
 			name="lefttdownfront"
-			xyz="-0.013435 -0.018491 0"
+			xyz="-0.013435 -0.018491 0.005"
 			rpy="-1.570796326794896 0 0.959931"
 		/>
 
 	<!---Back part of the wheel -->
+	
 		<xacro:roller_macro
 			parent="${name}"
 			name="upback"
-			xyz="0 -0.022857 0.013"
+			xyz="0 -0.022857 -0.006"
 			rpy="-1.570796326794896 0 1.570796326794896"
 		/>
 
 	<xacro:roller_macro
 			parent="${name}"
 			name="rightupback"
-			xyz=" -0.021738 -0.007063 0.013"
+			xyz=" -0.021738 -0.007063 -0.006"
 			rpy="-1.570796326794896 0 -2.82743"
 		/>
 		<xacro:roller_macro
 			parent="${name}"
 			name="leftupback"
-			xyz=" 0.021738 -0.007063 0.013"
+			xyz=" 0.021738 -0.007063 -0.006"
 			rpy="-1.570796326794896 0 2.82743"
 		/>
 
 		<xacro:roller_macro
 			parent="${name}"
 			name="rightdownback"
-			xyz="-0.013435 0.018491 0.013"
+			xyz="-0.013435 0.018491 -0.006"
 			rpy="-1.570796326794896 0 -0.959931"
 		/>
 		<xacro:roller_macro
 			parent="${name}"
 			name="lefttdownback"
-			xyz="0.013435 0.018491 0.013"
+			xyz="0.013435 0.018491 -0.006"
 			rpy="-1.570796326794896 0 0.959931"
 		/>
+
 
 		<transmission name="rim_${name}_transmission">
 			<type>transmission_interface/SimpleTransmission</type>
