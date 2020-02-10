@@ -19,7 +19,6 @@
 	<visual>
 		<geometry>
 			<mesh filename="package://erobotica_omnibot/mesh/chassi.stl"/>
-
 		</geometry>
 		<material name="base_material">
 			<color rgba="1 1 1 1"/>
