@@ -6,6 +6,7 @@
 	<link name="origin_link"/>
 	<link name="base_link">
 
+
 	<inertial>
 		<mass value="0.660"/>
 		<inertia
@@ -17,7 +18,9 @@
 			izz="0.00610900095537055"/>
 		</inertial>
 	<visual>
+	<origin	xyz="0 0 0"  rpy="0 0 0" />
 		<geometry>
+		
 			<mesh filename="package://erobotica_omnibot/mesh/chassi.stl"/>
 		</geometry>
 		<material name="base_material">
@@ -25,7 +28,9 @@
 		</material>
 	</visual>
 	<collision>
+	<origin	xyz="0 0 0"  rpy="0 0 0" />
 		<geometry>
+		
 			<mesh filename="package://erobotica_omnibot/mesh/chassi.stl"/>
 		</geometry>
 	</collision>
@@ -34,25 +39,25 @@
 	<joint name="base_joint" type="fixed">
 		<parent link="origin_link" />
 		<child link="base_link" />
-		<origin xyz="0 0 0.020269"/>
+		<origin xyz="0 0 0"/>
 	</joint>
 
 	<xacro:rim_macro
 		name="left"
 		color="0.3 0 0"
-		xyz="-0.0893842140 0.051606 0.020269"
+		xyz="-0.0893842140 0.051606 0.020272"
 		rpy="1.570796326794896 0 1.047197551196597"
 	/>
 	<xacro:rim_macro
 		name="back"
 		color="0 0.3 0"
-		xyz="0 -0.103212  0.020269"
+		xyz="0 -0.103212  0.020272"
 		rpy="1.570796326794896 0 3.141592653589793"
 	/>
 	<xacro:rim_macro
 		name="right"
 		color="0 0 0.3"
-		xyz="0.0893842140 0.051606 0.020269"
+		xyz="0.0893842140 0.051606 0.020272"
 		rpy="1.570796326794896 0 -1.047197551196597"
 	/>
 
