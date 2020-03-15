@@ -52,32 +52,32 @@
 		<xacro:roller_macro
 			parent="${name}"
 			name="upfront"
-			xyz="0 0.02406 0.006"
+			xyz="0 0.02406 0.0055"
 			rpy="-1.570796326794896 0 1.570796326794896"
 		/>
 		<xacro:roller_macro
 			parent="${name}"
 			name="rightupfront"
-			xyz=" 0.02288 0.00743 0.006"
+			xyz=" 0.02288 0.00743 0.0055"
 			rpy="-1.570796326794896 0 -2.82743"
 		/>
 		<xacro:roller_macro
 			parent="${name}"
 			name="leftupfront"
-			xyz=" -0.02288  0.00743 0.006"
+			xyz=" -0.02288  0.00743 0.0055"
 			rpy="-1.570796326794896 0 2.82743"
 		/>
 
 		<xacro:roller_macro
 			parent="${name}"
 			name="rightdownfront"
-			xyz="0.01414 -0.01947 0.006"
+			xyz="0.01414 -0.01947 0.0055"
 			rpy="-1.570796326794896 0 -0.959931"
 		/>
 		<xacro:roller_macro
 			parent="${name}"
 			name="lefttdownfront"
-			xyz="-0.01414 -0.01947 0.006"
+			xyz="-0.01414 -0.01947 0.0055"
 			rpy="-1.570796326794896 0 0.959931"
 		/>
 
@@ -86,33 +86,33 @@
 		<xacro:roller_macro
 			parent="${name}"
 			name="upback"
-			xyz="0 -0.02406 -0.006"
+			xyz="0 -0.02406 -0.0064"
 			rpy="-1.570796326794896 0 1.570796326794896"
 		/>
 
 	<xacro:roller_macro
 			parent="${name}"
 			name="rightupback"
-			xyz=" -0.02288 -0.00743 -0.006"
+			xyz=" -0.02288 -0.00743 -0.0064"
 			rpy="-1.570796326794896 0 -2.82743"
 		/>
 		<xacro:roller_macro
 			parent="${name}"
 			name="leftupback"
-			xyz=" 0.02288 -0.00743 -0.006"
+			xyz=" 0.02288 -0.00743 -0.0064"
 			rpy="-1.570796326794896 0 2.82743"
 		/>
 
 		<xacro:roller_macro
 			parent="${name}"
 			name="rightdownback"
-			xyz="-0.01414 0.01947 -0.006"
+			xyz="-0.01414 0.01947 -0.0064"
 			rpy="-1.570796326794896 0 -0.959931"
 		/>
 		<xacro:roller_macro
 			parent="${name}"
 			name="lefttdownback"
-			xyz="0.01414  0.01947 -0.006"
+			xyz="0.01414  0.01947 -0.0064"
 			rpy="-1.570796326794896 0 0.959931"
 		/>
 
